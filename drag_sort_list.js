@@ -26,6 +26,7 @@ class DraggableList {
             borderRadius: "99999px",
             transitionDuration: "150ms",
             userSelect: "none",
+            "-webkit-user-select": 'none',
             textAlign: "center",
             width: "300px",
         }

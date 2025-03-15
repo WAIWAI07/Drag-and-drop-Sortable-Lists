@@ -6,10 +6,14 @@ class DraggableList {
      * 
      * @description Create a DraggableList object
      * @param {HTMLElement} parent The parent container of the drag-and-drop sortable lists
+     * @param {string} css_url The URL of the CSS file
      */
-    constructor (parent, item_styles) {
+    constructor (parent, css_url = "./drag_sort_list.css") {
         this.parent = parent
         this.ghost_items = () => document.getElementsByClassName("ghost-item")
+
+        this.css_url = css_url
+
         this.parent_styles = {}
         this.item_styles = {}
         this.drag_item_viewer_styles = {}
@@ -111,7 +115,7 @@ class DraggableList {
         let link = document.createElement("link")
         link.rel = "stylesheet"
         link.type = "text/css"
-        link.href = "./drag_sort_list.css"
+        link.href = this.css_url
 
         // Append to the head element
         document.getElementsByTagName("head")[0].appendChild(link)

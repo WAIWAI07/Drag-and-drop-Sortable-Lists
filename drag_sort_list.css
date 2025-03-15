@@ -1,0 +1,82 @@
+/* The default CSS styles for the draggable list */
+
+/* Hover gray styles */
+div.draggable-item.hover-gray-100:hover {
+    background-color: #fcfcfc !important;
+}
+
+div.draggable-item.hover-gray-200:hover {
+    background-color: #fafafa !important;
+}
+
+div.draggable-item.hover-gray-300:hover {
+    background-color: #f8f8f8 !important;
+}
+
+div.draggable-item.hover-gray-400:hover {
+    background-color: #f6f6f6 !important;
+}
+
+div.draggable-item.hover-gray-500:hover {
+    background-color: #f4f4f4 !important;
+}
+
+div.draggable-item.hover-gray-600:hover {
+    background-color: #f2f2f2 !important;
+}
+
+div.draggable-item.hover-gray-700:hover {
+    background-color: #f0f0f0 !important;
+}
+
+div.draggable-item.hover-gray-800:hover {
+    background-color: #eeeeee !important;
+}
+
+div.draggable-item.hover-gray-900:hover {
+    background-color: #ececec !important;
+}
+
+div.draggable-item.hover-gray-1000:hover {
+    background-color: #eaeaea !important;
+}
+
+div.draggable-item.hover-gray-1100:hover {
+    background-color: #e8e8e8 !important;
+}
+
+div.draggable-item.hover-gray-1200:hover {
+    background-color: #e6e6e6 !important;
+}
+
+div.draggable-item.hover-gray-1300:hover {
+    background-color: #e4e4e4 !important;
+}
+
+div.draggable-item.hover-gray-1400:hover {
+    background-color: #e2e2e2 !important;
+}
+
+div.draggable-item.hover-gray-1500:hover {
+    background-color: #e0e0e0 !important;
+}
+
+div.draggable-item.hover-gray-1600:hover {
+    background-color: #dedede !important;
+}
+
+div.draggable-item.hover-gray-1700:hover {
+    background-color: #dbdbdb !important;
+}
+
+div.draggable-item.hover-gray-1800:hover {
+    background-color: #d9d9d9 !important;
+}
+
+div.draggable-item.hover-gray-1900:hover {
+    background-color: #d7d7d7 !important;
+}
+
+div.draggable-item.hover-gray-2000:hover {
+    background-color: #d5d5d5 !important;
+}

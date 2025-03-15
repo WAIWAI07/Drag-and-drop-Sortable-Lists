@@ -27,6 +27,7 @@ class DraggableList {
             transitionDuration: "150ms",
             userSelect: "none",
             "-webkit-user-select": 'none',
+            "-webkit-touch-callout": 'none',
             textAlign: "center",
             width: "300px",
         }
@@ -437,6 +438,8 @@ class DraggableList {
 
         // Add touch start event on the parent element
         this.parent.addEventListener('touchstart', (event) => {
+            event.preventDefault()
+
             // If the event target is not in the parent, then return null
             if (!Array.from(this.parent.children).includes(event.target)) return
 

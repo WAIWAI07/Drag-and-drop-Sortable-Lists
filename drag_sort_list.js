@@ -9,15 +9,28 @@ class DraggableList {
      * @param {string} css_url The URL of the CSS file
      */
     constructor (parent, css_url = "./drag_sort_list.css") {
+        // Set the parent
         this.parent = parent
+
+        // Set the items
         this.ghost_items = () => document.getElementsByClassName("ghost-item")
 
+        // Set the CSS URL
         this.css_url = css_url
-
+        
+        // Set the styles
         this.parent_styles = {}
         this.item_styles = {}
         this.drag_item_viewer_styles = {}
         this.ghost_item_styles = {}
+
+        // Set the last touch time
+        this.last_touch_time = Date.now()
+
+        // Set the touch fps
+        this.touch_fps = 30
+
+        // Set the default styles
 
         this.global_df_styles = {
             padding: "10px",
@@ -486,6 +499,9 @@ class DraggableList {
         this.parent.addEventListener('touchmove', (event) => {
             // If the drag target is not set, then return null
             if (!this.drag_target) return
+
+            // Touch FPS limitatation controller
+            if (Date.now() - this.last_touch_time < 1000 / this.touch_fps) return
 
             // If the touch point is not in the items of the parent, then return null
             if (!Array.from(this.parent.children).includes((document.elementFromPoint(event.touches[0].clientX, event.touches[0].clientY)))) return
